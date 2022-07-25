@@ -31,7 +31,7 @@ public class EncodingTestServlet extends HttpServlet {
 	
 	/*
 		POST방식 요청은 데이터가 request 내부(body)에 실려 도착하기 때문에
-		데이터를 꺼내기 전에 request 객체에 알맞은 인코딩 타입을 지정해주면 올바르게 디코딩할 수 있다.
+		데이터를 꺼내기 전에 request 객체에 알맞은 인코딩 타입을 지정해주면 올바르게 디코딩할 수 있 다.
 	*/
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {

@@ -33,7 +33,7 @@ public class InitParamTestServlet extends HttpServlet {
 		System.out.println(application.getInitParameter("developer"));
 		System.out.println(application.getInitParameter("user"));
 		System.out.println(application.getInitParameter("pass"));
-		
+
 		resp.getWriter().append("Init Parameter Test");
 	}
 }
