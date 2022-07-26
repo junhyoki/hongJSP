@@ -16,6 +16,7 @@ public class MainServlet extends HttpServlet {
 		System.out.println("user uri: " + req.getRequestURI());
 		
 		String uri = req.getRequestURI();
+		String front = "/chap03/main/";
 		String path = null;
 		
 		switch (uri) {
