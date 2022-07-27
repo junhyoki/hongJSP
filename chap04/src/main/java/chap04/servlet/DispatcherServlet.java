@@ -2,7 +2,6 @@ package chap04.servlet;
 
 import java.io.IOException;
 import java.util.HashMap;
-
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -24,6 +23,12 @@ public class DispatcherServlet extends HttpServlet {
 		uri_mapping.put("/employee/add_form", new EmployeeAddFormProcess());
 		uri_mapping.put("/employee/add_emp", new EmployeeAddProcess());
 		uri_mapping.put("/employee/add", new EmployeeCreateProcess());
+		uri_mapping.put("/employee/modifyForm", new EmployeeModifyFormProcess());
+		uri_mapping.put("/employee/modify", new EmployeeModifyProcess());
+		uri_mapping.put("/employee/delete", new EmployeeDeleteProcess());
+//		uri_mapping.put("/employee/remove", new EmployeeRemoveProcess());
+//		uri_mapping.put("/employee/modify_form", new EmployeeModifyFormProcess1());
+//		uri_mapping.put("/employee/modify", new EmployeeModifyProcess1());
 		// url_mapping.put("/employee/modify", new EmployeeUpdateProcess());
 		super.init(config);
 	}
@@ -43,7 +48,6 @@ public class DispatcherServlet extends HttpServlet {
 		// 사용자가 접속한 주소(URI)로 알맞은 처리(Process)를 꺼낸다.
 		Process process = uri_mapping.get(uri);
 		
-		System.out.println(process);
 		
 		String nextPath;
 		if (process != null) {

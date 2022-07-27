@@ -15,7 +15,8 @@
 	
 	<ul>
 		<c:forEach items="${employees }" var="employee">
-			<li>${employee.first_name } ${employee.last_name }</li>
+			<li>${employee.first_name } ${employee.last_name } (<a href="./modifyForm?emp=${employee.employee_id }"> 수정 </a>
+																/<a href="./delete?emp=${employee.employee_id }"> 삭제 </a>)</li>
 		</c:forEach>
 	</ul>
 	

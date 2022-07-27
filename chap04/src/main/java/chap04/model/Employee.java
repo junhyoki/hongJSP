@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Employee {
 	
-	private int employee_id;
+	private Integer employee_id;
 	private String first_name;
 	private String last_name;
 	private String hire_date;
@@ -17,6 +17,21 @@ public class Employee {
 	private String email;
 	private String phone_number;
 	private Integer manager_id;
+	
+	
+	public Employee(Integer employee_id, String first_name, String last_name, String email, String phone_number, String hire_date, String job_id, Double salary, Double commission_pct, Integer manager_id, Integer department_id) {
+		this.employee_id 	= employee_id;
+		this.first_name 	= first_name;
+		this.last_name 		= last_name;
+		this.email 			= email;
+		this.phone_number 	= phone_number;
+		this.hire_date 		= hire_date;
+		this.job_id 		= job_id;
+		this.salary 		= salary;
+		this.commission_pct = commission_pct;
+		this.manager_id 	= manager_id;
+		this.department_id 	= department_id;
+	}
 	
 	
 	public Employee(String first_name, String last_name, Double salary, Double commission_pct, String job_id, Integer department_id, String hire_date, String email, String phone_number, Integer manager_id) {
@@ -130,6 +145,7 @@ public class Employee {
 	public void setDepartment_id(Integer department_id) {
 		this.department_id = department_id;
 	}
+	
 	
 	@Override
 	public String toString() {
