@@ -1,0 +1,3 @@
+user=sys
+password=3333
+resource=/assets/

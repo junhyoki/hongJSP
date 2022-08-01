@@ -1,4 +1,4 @@
-package chap04.database;
+package jspboard.database;
 
 import java.sql.Connection;
 
@@ -29,4 +29,5 @@ public class DBConnector {
 			return null;
 		}
 	}
+	
 }

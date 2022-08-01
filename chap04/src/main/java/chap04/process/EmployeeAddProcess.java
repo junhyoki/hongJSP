@@ -4,7 +4,6 @@ import java.sql.Connection;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
 import java.sql.Date;
 
 import javax.servlet.http.HttpServletRequest;
@@ -24,9 +23,7 @@ public class EmployeeAddProcess implements Process {
 		
 		String sql = "INSERT INTO employees2(employee_id, last_name, email, hire_date, job_id)"
 				+ " VALUES(?, ?, ?, ?, ?)";
-		
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-		
+				
 		try (
 			Connection conn = DBConnector.getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(sql);
